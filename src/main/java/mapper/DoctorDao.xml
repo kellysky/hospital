@@ -8,8 +8,8 @@
 <!-- 使用动态sql，通过if判断，满足条件进行sql拼接 -->
 <!-- 商品的查询条件通过ItemsQueryVo的包装属性传递 -->
 <if test="doctorCustom!=null">
-<if test="doctorCustom.doctor_id!=null and doctorCustom.doctor_id!=''">
-doctor.id = '${doctorCustom.doctor_id}'
+<if test="doctorCustom.id!=null and doctorCustom.id!=''">
+doctor.id = '${doctorCustom.id}'
 </if>
 </if>
 </sql>
@@ -26,18 +26,18 @@ SELECT id,password,name,gender,age FROM doctor
 
 <select id="findDoctorById" parameterType="String" 
 resultType="po.DoctorCustom">
-SELECT id,password,name,gender,age FROM doctor where id = #{doctor_id, jdbcType=VARCHAR}
+SELECT id,password,name,gender,age FROM doctor where id = #{id, jdbcType=VARCHAR}
 </select>
 
 <update id="updateDoctorById" parameterType="po.DoctorCustom">
     UPDATE doctor SET
-    id = #{doctor_id},
+    id = #{id},
     password = #{password},
     name = #{name},
     gender = #{gender},
     age = #{age}
     WHERE
-    id = #{doctor_id}
+    id = #{id}
  </update>
 
 

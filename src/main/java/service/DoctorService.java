@@ -8,9 +8,9 @@ public interface DoctorService {
 	
 	public List<DoctorCustom> queryDoctorList()throws Exception;
 
-	public DoctorCustom findDoctorById(String doctor_id)throws Exception;
+	public DoctorCustom findDoctorById(String id)throws Exception;
 	
-	public void updateDoctorById(String doctor_id, DoctorCustom doctorCustom)throws Exception;
+	public void updateDoctorById(String id, DoctorCustom doctorCustom)throws Exception;
 
 	
 

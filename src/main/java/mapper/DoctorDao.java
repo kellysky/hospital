@@ -11,7 +11,7 @@ public interface DoctorDao {
 	
 public List<DoctorCustom> queryDoctorList()throws Exception;
 	
-public DoctorCustom findDoctorById(@Param("doctor_id")String doctor_id)throws Exception;
+public DoctorCustom findDoctorById(@Param("id")String id)throws Exception;
 
 public void updateDoctorById(DoctorCustom doctorCustom)throws Exception;
 

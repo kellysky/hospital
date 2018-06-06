@@ -9,11 +9,11 @@
 <body>
 <font size="5" >账户信息</font><br/>
 <form id="doctorForm" action="editDoctorSubmit.action" method="post" >
-<input type="hidden" id="password" name="password" value=${doctorCustom.password }/>
+<input type="hidden" id="password" name="password" value="${doctorCustom.password }"/>
 <table>
 <tr>
 <td><font size="3" >账户</font></td>
-<td><input type="text" id="doctor_id" name="doctor_id" value=${doctorCustom.doctor_id} /></td>
+<td><input type="text" id="id" name="id" value="${doctorCustom.id}" /></td>
 </tr>
 <!-- <tr>
 <td><font size="3" >密码</font></td>
@@ -21,15 +21,15 @@
 </tr> -->
 <tr>
 <td><font size="3" >姓名</font></td>
-<td><input type="text" id="name" name="name" value=${doctorCustom.name} /></td>
+<td><input type="text" id="name" name="name" value="${doctorCustom.name}" /></td>
 </tr>
 <tr>
 <td><font size="3" >性别</font></td>
-<td><input type="text" id="balance" name="balance" value=${doctorCustom.gender} /></td>
+<td><input type="text" id="balance" name="gender" value="${doctorCustom.gender}" /></td>
 </tr>
 <tr>
 <td><font size="3" >年龄</font></td>
-<td><input type="text" id="balance" name="balance" value=${doctorCustom.age} /></td>
+<td><input type="text" id="balance" name="age" value="${doctorCustom.age}"/></td>
 </tr>
 <tr>
 <td colspan="2" align="center"><input type="submit" value="提交"/>

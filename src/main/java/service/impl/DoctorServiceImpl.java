@@ -20,15 +20,15 @@ public class DoctorServiceImpl implements DoctorService{
 		return doctordao.queryDoctorList();
 	}
 
-	public DoctorCustom findDoctorById(String doctor_id) throws Exception {
+	public DoctorCustom findDoctorById(String id) throws Exception {
 		// TODO Auto-generated method stub
-		return doctordao.findDoctorById(doctor_id);
+		return doctordao.findDoctorById(id);
 	}
 
-	public void updateDoctorById(String doctor_id, DoctorCustom doctorCustom) throws Exception {
+	public void updateDoctorById(String id, DoctorCustom doctorCustom) throws Exception {
 		// TODO Auto-generated method stub
-		if(doctor_id!=null) {
-			doctorCustom.setDoctor_id(doctor_id);
+		if(id!=null) {
+			doctorCustom.setId(id);
 			doctordao.updateDoctorById(doctorCustom);
 		}
 		

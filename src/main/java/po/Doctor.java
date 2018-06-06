@@ -1,16 +1,16 @@
 package po;
 
 public class Doctor {
-	private String doctor_id;
+	private String id;
 	private String password;
 	private String name;
 	private String gender;
 	private int age;
-	public String getDoctor_id() {
-		return doctor_id;
+	public String getId() {
+		return id;
 	}
-	public void setDoctor_id(String doctor_id) {
-		this.doctor_id = doctor_id;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getPassword() {
 		return password;

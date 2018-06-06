@@ -36,8 +36,8 @@ public class DoctorController {
 	}
 	
 	@RequestMapping("/editDoctor.action")
-	public ModelAndView editDoctor(@RequestParam("id")String doctor_id) throws Exception{
-		DoctorCustom doctorCustom = doctorService.findDoctorById(doctor_id);
+	public ModelAndView editDoctor(@RequestParam("id")String id) throws Exception{
+		DoctorCustom doctorCustom = doctorService.findDoctorById(id);
 		
 		ModelAndView modelandview = new ModelAndView();
 		modelandview.addObject("doctorCustom",doctorCustom);
@@ -49,9 +49,9 @@ public class DoctorController {
 		
 	}
 	@RequestMapping("/editDoctorSubmit.action")
-	public String editDoctorSubmit(HttpServletRequest request,String doctor_id,DoctorCustom doctorCustom) throws Exception{
+	public String editDoctorSubmit(HttpServletRequest request,String id,DoctorCustom doctorCustom) throws Exception{
 		
-		doctorService.updateDoctorById(doctor_id, doctorCustom);
+		doctorService.updateDoctorById(id, doctorCustom);
 			
 		return "forward:queryDoctor.action";
 		

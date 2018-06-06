@@ -9,11 +9,11 @@
 <body>
 <font size="5" >账户信息</font><br/>
 <form id="accountForm" action="editAccountSubmit.action" method="post" >
-<input type="hidden" id="password" name="password" value=${accountCustom.password }/>
+<input type="hidden" id="password" name="password" value="${accountCustom.password }"/>
 <table>
 <tr>
 <td><font size="3" >账户</font></td>
-<td><input type="text" id="account_id" name="account_id" value=${accountCustom.account_id} /></td>
+<td><input type="text" id="account_id" name="account_id" value="${accountCustom.account_id}" /></td>
 </tr>
 <!-- <tr>
 <td><font size="3" >密码</font></td>
@@ -21,7 +21,7 @@
 </tr> -->
 <tr>
 <td><font size="3" >余额</font></td>
-<td><input type="text" id="balance" name="balance" value=${accountCustom.balance} /></td>
+<td><input type="text" id="balance" name="balance" value="${accountCustom.balance}" /></td>
 </tr>
 <tr>
 <td colspan="2" align="center"><input type="submit" value="提交"/>
