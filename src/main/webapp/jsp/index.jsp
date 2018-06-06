@@ -10,15 +10,19 @@
 <tr>
     <td>账户</td>
     <td>密码</td>
-    <td>余额</td>
+    <td>姓名</td>
+    <td>性别</td>
+    <td>年龄</td>
 </tr>
 
-<c:forEach items="${accountList}" var = "account">
+<c:forEach items="${docotrList}" var = "doctor">
 <tr>
-    <td>${account.account_id }</td>
-    <td>${account.password }</td>
-    <td>${account.balance }</td>
-    <td><a href="${pageContext.request.contextPath }/account/editAccount.action?id=${account.account_id}">修改</a></td>
+    <td>${doctor.doctor_id }</td>
+    <td>${doctor.password }</td>
+    <td>${doctor.name}</td>
+    <td>${doctor.gender}</td>
+    <td>${doctor.age}</td>
+    <td><a href="${pageContext.request.contextPath }/doctor/editDoctor.action?id=${doctor.doctor_id}">修改</a></td>
 </tr>
 </c:forEach> 
 </table>

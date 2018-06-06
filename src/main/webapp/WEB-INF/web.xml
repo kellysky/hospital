@@ -6,7 +6,7 @@ xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.co
 
 
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>springmv_mybatis1208</display-name>
+  <display-name>hospital</display-name>
   
    <!-- 加载spring容器 
   <param-value>/WEB-INF/classes/spring/applicationContext.xml,/WEB-
