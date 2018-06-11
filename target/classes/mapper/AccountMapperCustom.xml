@@ -38,7 +38,7 @@ SELECT account_id,password,balance FROM account where account_id = #{account_id,
     password = #{password},
     balance = #{balance}
     WHERE
-    id = #{account_id}
+    account_id = #{account_id}
  </update>
 
 

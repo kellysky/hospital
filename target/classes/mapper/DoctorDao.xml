@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.DoctorDao" >
+
+
+<!-- 定义商品查询的sql片段，就是商品查询条件 -->
+<sql id="query_doctor_where">
+<!-- 使用动态sql，通过if判断，满足条件进行sql拼接 -->
+<!-- 商品的查询条件通过ItemsQueryVo的包装属性传递 -->
+<if test="doctorCustom!=null">
+<if test="doctorCustom.id!=null and doctorCustom.id!=''">
+doctor.id = '${doctorCustom.id}'
+</if>
+</if>
+</sql>
+
+
+<!-- 商品的列表查询
+parameterType包装了查询条件
+resultType使用扩展对象
+-->
+<select id="queryDoctorList" 
+resultType="po.DoctorCustom">
+SELECT id,password,name,gender,age FROM doctor
+</select>
+
+<select id="findDoctorById" parameterType="String" 
+resultType="po.DoctorCustom">
+SELECT id,password,name,gender,age FROM doctor where id = #{id, jdbcType=VARCHAR}
+</select>
+
+<update id="updateDoctorById" parameterType="po.DoctorCustom">
+    UPDATE doctor SET
+    id = #{id},
+    password = #{password},
+    name = #{name},
+    gender = #{gender},
+    age = #{age}
+    WHERE
+    id = #{id}
+ </update>
+
+
+</mapper>

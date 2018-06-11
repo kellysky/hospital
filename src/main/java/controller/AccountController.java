@@ -32,7 +32,7 @@ public class AccountController {
 		ModelAndView modelandview = new ModelAndView();
 		modelandview.addObject("accountList",accountList);
 		
-		modelandview.setViewName("index");
+		modelandview.setViewName("index1");
 		
 		return modelandview;
 	}

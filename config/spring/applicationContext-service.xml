@@ -22,4 +22,5 @@ xmlns:tx="http://www.springframework.org/schema/tx"
 
 <!-- 商品管理的service -->
 <bean id="accountService" class="service.impl.AccountServiceImpl" />
+<bean id="doctorService" class="service.impl.DoctorServiceImpl" />
 </beans>
